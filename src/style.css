@@ -8,8 +8,16 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Palanquin', sans-serif;
   font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+  
 }
 
 /* ── Header ── */
@@ -48,4 +56,5 @@ nav {
 /* ── Content ── */
 #content {
   padding: 2rem;
+  background-color: rgb(158, 105, 208);
 }
