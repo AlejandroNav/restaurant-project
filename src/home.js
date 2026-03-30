@@ -2,7 +2,7 @@ export function loadHome() {
   const content = document.getElementById('content');
   content.innerHTML = '';
 
-  // ── Hero ──
+  //  Hero 
   const hero = document.createElement('div');
   hero.classList.add('hero');
 
