@@ -1,12 +1,12 @@
-
-
 :root {
-  --color-1: color(display-p3 0.981 0.751 0.224);
-  --color-2: color(display-p3 0.03 0.027 0.099);
-   --color-1 :color(display-p3 0.996 0.981 0.459);
-   --color-2: color(display-p3 0.204 0.371 0.336);
+  --color-1: rgb(131, 247, 255);
+  --color-2: rgb(0, 88, 129);
+  --contrast: rgb(62, 62, 62);
+  /* --color-1 :color(display-p3 0.996 0.981 0.459);
+   --color-2: color(display-p3 0.204 0.371 0.336);*/
 
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Palanquin:wght@300;400;600&display=swap');
 
 @font-face {
@@ -15,6 +15,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'BoldBalloon';
   src: url('./fonts/Balloon Xbold.ttf') format('opentype');
@@ -23,7 +24,9 @@
 }
 
 /* ── Reset ── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -56,7 +59,7 @@ header {
 .logo-title {
   font-family: 'BoldBalloon', sans-serif;
   font-size: 4.2rem;
-  color: var(--black);
+  color: var(--contrast);
 }
 
 /* ── Nav ── */
@@ -67,7 +70,7 @@ nav {
 
 .nav-btn {
   background: none;
-  border: 3px solid var(--black);
+  border: 2px solid var(--black);
   padding: 0.5rem 2rem;
   cursor: pointer;
   font-size: 1rem;
@@ -75,13 +78,13 @@ nav {
   font-weight: 600;
   color: var(--black);
   border-radius: 0;
-  box-shadow: 3px 3px 0px var(--black);
+  box-shadow: 3px 4px 0px var(--black);
   transition: box-shadow 0.1s, transform 0.1s, background-color 0.1s, color 0.1s;
 }
 
 .nav-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--black);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 6px 0px var(--black);
   background-color: var(--color-2);
   color: var(--color-1);
 }
@@ -89,7 +92,8 @@ nav {
 .nav-btn.active {
   background-color: var(--color-2);
   color: var(--color-1);
-  box-shadow: 3px 3px 0px var(--black);
+  box-shadow: 5px 6px 0px var(--black);
+
 }
 
 /* ── Content ── */
@@ -99,8 +103,15 @@ nav {
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ── Hero ── */
@@ -116,16 +127,7 @@ nav {
   border-bottom: 4px solid var(--black);
 }
 
-.hero-eyebrow {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-1);
-  opacity: 0.75;
-}
-
-.hero-title {
+#rumbe{
   font-family: 'BoldBalloon', sans-serif;
   font-size: 5rem;
   color: var(--color-1);
@@ -133,15 +135,17 @@ nav {
 }
 
 .tagline {
-  font-size: 1.2rem;
-  max-width: 500px;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 700;
+  max-width: 600px;
   color: var(--color-1);
   line-height: 1.6;
 }
 
 .cta-btn {
-  background-color: var(--black);
-  color: var(--color-1);
+  background-color: var(--color-1);
+  color: var(--black);
   border: 3px solid var(--black);
   padding: 1rem 2.5rem;
   font-family: 'Palanquin', sans-serif;
@@ -149,13 +153,13 @@ nav {
   font-weight: 600;
   cursor: pointer;
   border-radius: 0;
-  box-shadow: 5px 5px 0px var(--color-1);
+  box-shadow: 5px 5px 0px var(--black);
   transition: box-shadow 0.1s, transform 0.1s;
 }
 
 .cta-btn:hover {
   transform: translate(3px, 3px);
-  box-shadow: 2px 2px 0px var(--color-1);
+  box-shadow: 4px 4px 0px var(--black);
 }
 
 /* ── Cards ── */
