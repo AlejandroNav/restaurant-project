@@ -1,7 +1,7 @@
 :root {
-  --color-1: rgb(131, 247, 255);
-  --color-2: rgb(0, 88, 129);
-  --contrast: rgb(62, 62, 62);
+  --color-1: rgb(241, 173, 156);
+  --color-2: rgb(187, 67, 40);
+  --contrast: rgb(170, 6, 6);
   /* --color-1 :color(display-p3 0.996 0.981 0.459);
    --color-2: color(display-p3 0.204 0.371 0.336);*/
 
@@ -42,7 +42,15 @@ body {
   min-height: 100vh;
   background-color: var(--color-1);
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+#content {
+  flex: 1;
+}
 /* ── Header ── */
 header {
   display: flex;
@@ -55,7 +63,14 @@ header {
   top: 0;
   z-index: 100;
 }
-
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+}
 .logo-title {
   font-family: 'BoldBalloon', sans-serif;
   font-size: 4.2rem;
@@ -165,7 +180,7 @@ nav {
 /* ── Cards ── */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
   padding: 4rem 3rem;
   background-color: var(--color-1);
@@ -202,4 +217,157 @@ nav {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-1);
+}
+
+/* ── Footer ── */
+footer {
+  background-color: var(--color-2);
+  border-top: 4px solid var(--black);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-family: 'BoldBalloon', sans-serif;
+  font-size: 2.4rem;
+  color: var(--color-1);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--color-1);
+  opacity: 0.75;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social-btn {
+  background: none;
+  border: 2px solid var(--color-1);
+  color: var(--color-1);
+  padding: 0.35rem 0.65rem;
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 3px 3px 0px var(--color-1);
+  transition: box-shadow 0.1s, transform 0.1s, background-color 0.1s, color 0.1s;
+}
+
+.social-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--color-1);
+  background-color: var(--color-1);
+  color: var(--color-2);
+}
+
+.footer-col-title {
+  font-family: 'Balloon', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-1);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-1);
+  padding-bottom: 0.4rem;
+  opacity: 0.9;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: var(--color-1);
+  font-family: 'Palanquin', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  opacity: 0.8;
+  transition: opacity 0.1s, letter-spacing 0.1s;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  letter-spacing: 0.03em;
+}
+
+.footer-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 220px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-1);
+  opacity: 0.85;
+  border-bottom: 1px solid rgba(131, 247, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+/* ── Footer bottom bar ── */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 3rem;
+  border-top: 2px solid rgba(131, 247, 255, 0.2);
+  font-size: 0.8rem;
+  color: var(--color-1);
+  opacity: 0.6;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-legal a {
+  color: var(--color-1);
+  text-decoration: none;
+  transition: opacity 0.1s;
+}
+
+.footer-legal a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ── Footer responsive ── */
+@media (max-width: 600px) {
+  .footer-top {
+    flex-direction: column;
+    padding: 2rem 1.25rem;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 1.25rem;
+  }
 }
