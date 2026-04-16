@@ -3,8 +3,7 @@
   --color-2: rgb(187, 67, 40);
   --contrast: rgb(170, 6, 6);
   /* --color-1 :color(display-p3 0.996 0.981 0.459);
-   --color-2: color(display-p3 0.204 0.371 0.336);*/
-
+  --color-2: color(display-p3 0.204 0.371 0.336);*/
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Palanquin:wght@300;400;600&display=swap');
@@ -42,6 +41,7 @@ body {
   min-height: 100vh;
   background-color: var(--color-1);
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -51,6 +51,7 @@ body {
 #content {
   flex: 1;
 }
+
 /* ── Header ── */
 header {
   display: flex;
@@ -63,6 +64,7 @@ header {
   top: 0;
   z-index: 100;
 }
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -71,6 +73,7 @@ header {
     padding: 1rem;
   }
 }
+
 .logo-title {
   font-family: 'BoldBalloon', sans-serif;
   font-size: 4.2rem;
@@ -142,7 +145,7 @@ nav {
   border-bottom: 4px solid var(--black);
 }
 
-#rumbe{
+#rumbe {
   font-family: 'BoldBalloon', sans-serif;
   font-size: 5rem;
   color: var(--color-1);
@@ -180,7 +183,7 @@ nav {
 /* ── Cards ── */
 .cards {
   display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
   padding: 4rem 3rem;
   background-color: var(--color-1);
@@ -370,4 +373,97 @@ footer {
     text-align: center;
     padding: 1rem 1.25rem;
   }
+}
+
+/* ── Menu Header ── */
+.menu-header {
+  background-color: var(--color-2);
+  border-bottom: 4px solid var(--black);
+  padding: 1rem 2rem 1rem;
+  text-align: center;
+}
+
+.menu-title {
+  font-family: 'BoldBalloon', sans-serif;
+  font-size: 4rem;
+  color: var(--color-1);
+  line-height: 1;
+}
+
+.menu-subtitle {
+  font-size: 1rem;
+  color: var(--color-1);
+  opacity: 0.75;
+  margin-top: 0.1rem;
+  font-style: italic;
+}
+
+/* ── Menu Grid ── */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+}
+
+/* ── Menu Section ── */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--color-2);
+  border: 3px solid var(--black);
+  box-shadow: 6px 6px 0px var(--black);
+  padding: 1.5rem;
+}
+
+.menu-section-title {
+  font-family: 'Balloon', sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-1);
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--color-1);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.575rem;
+}
+
+/* ── Menu Item ── */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .5rem;
+  padding: 0.43rem 0;
+  border-bottom: 2px solid rgba(182, 250, 255, 0.419);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.menu-item-name {
+  font-weight: 600;
+  font-size: 1.45rem;
+  color: var(--color-1);
+}
+
+.menu-item-desc {
+  font-size: 1.2rem;
+  color: var(--color-1);
+  opacity: 0.75;
+  line-height: 1.4;
+}
+
+.menu-item-price {
+  font-family: 'Balloon', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-1);
+  white-space: nowrap;
 }
