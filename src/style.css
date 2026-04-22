@@ -1,6 +1,6 @@
 :root {
-  --color-1: rgb(241, 173, 156);
-  --color-2: rgb(187, 67, 40);
+  --color-1: rgb(241, 237, 236);
+  --color-2: rgb(209, 57, 23);
   --contrast: rgb(170, 6, 6);
   /* --color-1 :color(display-p3 0.996 0.981 0.459);
   --color-2: color(display-p3 0.204 0.371 0.336);*/
@@ -391,11 +391,10 @@ footer {
 }
 
 .menu-subtitle {
-  font-size: 1rem;
+  font-size: 2rem;
   color: var(--color-1);
-  opacity: 0.75;
+  opacity: 0.85;
   margin-top: 0.1rem;
-  font-style: italic;
 }
 
 /* ── Menu Grid ── */
@@ -466,4 +465,121 @@ footer {
   font-size: 1.6rem;
   color: var(--color-1);
   white-space: nowrap;
+}
+
+/* ── Contact ── */
+.contact-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact-header {
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'BoldBalloon', sans-serif;
+  font-size: 3.5rem;
+  color: var(--contrast);
+  line-height: 1;
+}
+.contact-subtitle {
+  font-size: 1rem;
+  color: var(--contrast);
+  opacity: 0.7;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* ── Map ── */
+.contact-map {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 3px solid var(--black);
+  box-shadow: 6px 6px 0px var(--black);
+}
+
+.map-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 320px;
+}
+
+.map-link {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  background-color: var(--color-2);
+  color: var(--color-1);
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-top: 3px solid var(--black);
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.map-link:hover {
+  background-color: var(--color-1);
+  color: var(--color-2);
+}
+/* ── Contact buttons ── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  border: 3px solid var(--black);
+  box-shadow: 5px 5px 0px var(--black);
+  text-decoration: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.contact-btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0px var(--black);
+}
+
+.whatsapp-btn {
+  background-color: var(--color-2);
+}
+
+.facebook-btn {
+  background-color: var(--color-1);
+}
+
+.contact-btn-label {
+  font-family: 'Balloon', sans-serif;
+  font-size: 1.2rem;
+}
+
+.whatsapp-btn .contact-btn-label,
+.whatsapp-btn .contact-btn-value {
+  color: var(--color-1);
+}
+
+.facebook-btn .contact-btn-label,
+.facebook-btn .contact-btn-value {
+  color: var(--contrast);
+}
+
+.contact-btn-value {
+  font-family: 'Palanquin', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
 }

@@ -68,7 +68,7 @@ export function loadMenu() {
 
   const menuHeader = document.createElement('div');
   menuHeader.classList.add('menu-header');
-  menuHeader.innerHTML = `<h1 class="menu-title">Menú</h1><p class="menu-subtitle">Mariscos La Rumbera — Melchor Ocampo</p>`;
+  menuHeader.innerHTML = `<h1 class="menu-title">Menú</h1><p class="menu-subtitle">Mariscos La Rumbera, Melchor Ocampo</p>`;
   content.appendChild(menuHeader);
 
   const grid = document.createElement('div');
