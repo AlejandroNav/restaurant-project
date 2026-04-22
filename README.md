@@ -9,7 +9,7 @@ Single-page application for a real local restaurant. Each section is rendered th
 JavaScript DOM manipulation with no page reloads. The design follows a neo-brutalist
 style with bold borders, hard box shadows, and a cyan and teal palette.
 
-Live Demo: [Link]
+Live Demo: [[Link](https://alejandronav.github.io/restaurant-project/)]
 
 ## Features
 
